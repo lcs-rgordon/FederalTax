@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     // Calculate the tax owing
     @IBAction func calculateTax(_ sender: Any) {
         
+        // Dismiss the keyboard
+        view.endEditing(true)
+        
         // Clear the output boxes from last run
         outputTaxOwingInDollars.text = ""
         outputEffectiveTaxRate.text = ""
