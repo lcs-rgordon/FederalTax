@@ -52,6 +52,9 @@
                                 <rect key="frame" x="118" y="233" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate Tax Owing"/>
+                                <connections>
+                                    <action selector="calculateTax:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQl-c7-vjy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hpf-wP-kzt">
                                 <rect key="frame" x="40" y="271" width="301" height="82"/>
@@ -71,6 +74,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="givenGrossIncome" destination="Kmv-Uz-yeE" id="9Qv-uZ-gcY"/>
+                        <outlet property="givenName" destination="5PI-3H-hKB" id="tqc-no-fIB"/>
+                        <outlet property="outputEffectiveTaxRate" destination="cH6-19-w7d" id="74P-39-vyJ"/>
+                        <outlet property="outputTaxOwingInDollars" destination="Hpf-wP-kzt" id="aSZ-8w-oet"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
