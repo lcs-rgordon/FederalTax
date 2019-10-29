@@ -34,11 +34,26 @@ class ViewController: UIViewController {
             outputTaxOwingInDollars.text = "Please enter a name."
             return
         }
-        
+
+        // Do not allow no name to be entered
         if name == "" {
             outputTaxOwingInDollars.text = "Please enter a name."
             return
         }
+        
+        // Get the gross income as a String
+        guard let givenGrossIncomeAsString = givenGrossIncome.text else {
+            outputTaxOwingInDollars.text = "Please enter your gross income in dollars."
+            return
+        }
+        
+        // Get the gross income as a Double
+        guard let givenGrossIncomeAsDouble = Double(givenGrossIncomeAsString) else {
+            outputTaxOwingInDollars.text = "Please enter your gross income in dollars."
+            return
+        }
+        
+
         
     }
     
