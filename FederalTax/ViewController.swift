@@ -30,26 +30,28 @@ class ViewController: UIViewController {
         outputEffectiveTaxRate.text = ""
         
         // First, get the given name
+        let nameError = "Please enter a name."
         guard let name = givenName.text else {
-            outputTaxOwingInDollars.text = "Please enter a name."
+            outputTaxOwingInDollars.text = nameError
             return
         }
 
         // Do not allow no name to be entered
         if name == "" {
-            outputTaxOwingInDollars.text = "Please enter a name."
+            outputTaxOwingInDollars.text = nameError
             return
         }
         
         // Get the gross income as a String
+        let grossIncomeError = "Please enter your gross income in dollars."
         guard let givenGrossIncomeAsString = givenGrossIncome.text else {
-            outputTaxOwingInDollars.text = "Please enter your gross income in dollars."
+            outputTaxOwingInDollars.text = grossIncomeError
             return
         }
         
         // Get the gross income as a Double
         guard let givenGrossIncomeAsDouble = Double(givenGrossIncomeAsString) else {
-            outputTaxOwingInDollars.text = "Please enter your gross income in dollars."
+            outputTaxOwingInDollars.text = grossIncomeError
             return
         }
         
